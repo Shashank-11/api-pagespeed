@@ -1,0 +1,16 @@
+.dom-wrapper {
+  min-height: 100%;
+  min-height: -webkit-calc(100vh - 58px);
+  min-height: -moz-calc(100vh - 58px);
+  min-height: calc(100vh - 58px);
+}
+
+table,
+table.score {
+  margin: 15px 0px;
+  white-space: nowrap;
+}
+table tbody tr td input {
+  width: 100%;
+  padding: 10px;
+}

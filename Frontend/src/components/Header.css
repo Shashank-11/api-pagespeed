@@ -1,0 +1,19 @@
+.header {
+  background-color: #06c;
+  color: white;
+}
+.header .app-title {
+  color: white !important;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 30px;
+}
+.header nav a,
+.nav-link {
+  color: white !important;
+}
+@media only screen and (max-width: 600px) {
+  .navbar-nav {
+    text-align: center;
+  }
+}

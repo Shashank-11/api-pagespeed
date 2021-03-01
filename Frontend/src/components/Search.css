@@ -1,0 +1,22 @@
+.dropdown-toggle {
+  width: 100%;
+  text-align: left !important;
+  padding: 6px;
+  border-radius: 40px !important;
+  padding: 10px !important;
+  font-size: 15px !important;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.dropdown-menu {
+  width: 100%;
+}
+button.search,
+button.add {
+  border-radius: 40px !important;
+  padding: 10px 15px !important;
+}
+.form-control {
+  border-radius: 40px !important;
+  padding: 20px !important;
+}

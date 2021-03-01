@@ -1,0 +1,13 @@
+.react-datepicker-popper {
+  transform: translate3d(5px, 35px, 0px) !important;
+}
+.react-datepicker-wrapper input {
+  border-radius: 40px;
+  padding: 10px;
+  border: 1px solid #000;
+  outline: none;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 15px;
+  color: black;
+}

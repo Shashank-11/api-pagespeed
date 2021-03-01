@@ -1,0 +1,17 @@
+.footer {
+  width: 100%;
+  text-align: right;
+  padding: 20px 15px;
+  color: white;
+  background: #44464b;
+}
+
+.footer h5 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: right;
+  margin: 0;
+}
