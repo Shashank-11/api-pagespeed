@@ -5,7 +5,7 @@ const router = express.Router();
 const Score = require('../models/scores.model')
 const request = require("request");
 
-// get all the posts
+// get all the score
 router.get('/', async (req, res)=>{
 	try {
 		const scores = await Score.find()
@@ -61,7 +61,7 @@ router.post('/score', (req, res)=>{
 
 })
 
-// get specific post
+// get specific score
 router.get('/score', async(req, res)=>{
 	try {
 		const score = await Score.find({ url: req.query.url, date: req.query.date })

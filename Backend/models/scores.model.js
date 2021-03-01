@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 const ScoresSchema = new mongoose.Schema(
     {
         date: {
-						type: String,
-						default: Date.now()
+						type: Date,
+						default: Date.now
         },
         url: {
             type: String
