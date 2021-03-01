@@ -12,7 +12,7 @@ router.get('/', async (req, res)=>{
 		res.json(scores)
 	}
 	catch(err){
-		res.json({message: err.message})
+		res.status(400).json({message: err.message})
 	}
 })
 
@@ -68,7 +68,7 @@ router.get('/score', async(req, res)=>{
 		res.json(score)
 	}
 	catch(err){
-		res.json({message: err.message})
+		res.status(400).json({message: err.message})
 	}
 })
 
