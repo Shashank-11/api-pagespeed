@@ -24,11 +24,26 @@ router.post('/score', (req, res)=>{
 	const options = "&fields=lighthouseResult%2Fcategories%2F*%2Fscore&prettyPrint=false&strategy=mobile&category=performance&category=pwa&category=best-practices&category=accessibility&category=seo"
 	request('https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=' + url + options +'&key=' + process.env.PAGESPEED_API_KEY, { json: true }, (err, response, body) => {
 			if (err) {
-					res.json({
-							'status': 'error',
+					res.status(400).json({
 							'message': err
 					})
 			} else {
+					if (body.error) {
+							let errors = [];
+							for (var i = 0, len = body.error.errors.length; i < len; ++i) {
+									if (body.error.errors[i].reason == 'keyInvalid') {
+											errors.push('Your API KEY IS Invalid.');
+									}
+									if (body.error.errors[i].reason == 'mainResourceRequestFailed') {
+											errors.push('Your API KEY IS Invalid.')
+									} else {
+											errors.push(body.error.errors);
+									}
+							}
+							res.status(500).json({
+									'errors': errors
+							})
+					} else {
 						const scores = new Score({
 							url: req.body.url,
 							score: body
@@ -40,6 +55,7 @@ router.post('/score', (req, res)=>{
 						.catch(err =>{
 							res.json({message: err})
 						})
+					}
 			}
 	});
 
